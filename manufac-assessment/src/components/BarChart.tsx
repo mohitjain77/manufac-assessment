@@ -71,7 +71,7 @@ const BarChart = () => {
 
     return (
         <div>
-            <h1>Bar Chart</h1>
+            <h1 className="title">Bar Chart</h1>
             <ReactECharts option={options} />
         </div >
     );
