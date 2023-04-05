@@ -42,7 +42,7 @@ const ScatterPlot = () => {
   };
   return (
     <div>
-      <h1>Scatter Plot</h1>
+      <h1 className="title">Scatter Plot</h1>
       <ReactECharts option={options} />
     </div>
   );
