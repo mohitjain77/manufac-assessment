@@ -2,6 +2,8 @@ import ReactECharts from "echarts-for-react";
 import { wineData } from "../utils/wineData";
 import { ScatterOptions } from "../interfaces/ScatterData";
 const ScatterPlot = () => {
+
+  // Creates ScatterData as Array of arrays, format = [[x="Color intensity",y="Hue"],.....]
   const getWineScatterData = (): number[][] => {
     let scatterData: number[][] = [];
     wineData.forEach((wine) => {
@@ -18,6 +20,7 @@ const ScatterPlot = () => {
     return scatterData;
   };
 
+  // options to generate ScatterPlot Graph
   const options: ScatterOptions = {
     xAxis: {
       name: "Color Intensity",
@@ -40,6 +43,7 @@ const ScatterPlot = () => {
       },
     ],
   };
+
   return (
     <div>
       <h1 className="title">Scatter Plot</h1>
