@@ -1,4 +1,4 @@
-export interface ScatterOptions{
+export interface BarOptions{
     xAxis:xAxis,
     yAxis:yAxis,
     tooltip:tooltip,
@@ -6,9 +6,8 @@ export interface ScatterOptions{
 }
 
 interface xAxis{
-    name:string,
-    nameLocation:string,
-    nameTextStyle:nameTextStyle,
+    type:string,
+    data:string[]
 }
 
 interface yAxis{
@@ -19,6 +18,7 @@ interface yAxis{
 
 interface tooltip{
     trigger: string,
+    axisPointer: axisPointer
 }
 
 interface axisPointer {
@@ -26,8 +26,8 @@ interface axisPointer {
 }
 
 interface seriesElements{
-    symbolSize: number,
-    data: number[][],
+    barWidth: string,
+    data: number[],
     type: string,
 }
 
