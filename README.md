@@ -1,7 +1,7 @@
 # manufac-assessment
 This project takes a json data and provides two graphs i.e, Scatter Plot and Bar Chat, which you can navigate through navigation bar. This is a single-page website built-in TypeScript in React.  
 
-To run the project : 
+To run the project : </br>
 `cd manufac-assessment`<br />
 `yarn && yarn start`
 
