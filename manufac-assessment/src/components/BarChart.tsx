@@ -2,9 +2,11 @@ import ReactECharts from "echarts-for-react";
 import { wineData } from "../utils/wineData";
 import { BarOptions } from "../interfaces/BarData";
 const BarChart = () => {
+
     const getClassAvgMalicAcid = (): number[] => {
         let avgDataList: number[] = [];
         let avgDataMap = new Map<number, number[]>();
+        // Created a map with key="alcohol", value="Array of Malic Acid Values"
         wineData.forEach((wine) => {
             if (avgDataMap.has(wine["Alcohol"])) {
                 let alcoholClassArray = avgDataMap.get(wine["Alcohol"]) as number[];
@@ -17,6 +19,7 @@ const BarChart = () => {
             }
         });
 
+        // Creating Array of average of each Malic Acid Alcohol Types
         avgDataMap.forEach((malicAcidArray, keys) => {
             let avgValue = 0;
             let totalSum = 0;
@@ -30,6 +33,7 @@ const BarChart = () => {
         return avgDataList;
     };
 
+    // Created List of distinct Alcohol Types
     const getAlcoholType = (): string[] => {
         let alcoholTypeList: string[] = [];
         let alcoholTypeMap = new Map<number, boolean>();
@@ -44,6 +48,7 @@ const BarChart = () => {
         return alcoholTypeList;
     }
 
+    // options to generate Bar Chart Graph
     const options: BarOptions = {
         xAxis: {
             type: 'category',
